@@ -7,16 +7,21 @@
 🇺🇸 This is a free desktop application for Windows, MacOS & Linux, that creates and validates ZUGFeRD invoices. Please scroll down for information about development in English language.
 
 
-## Download
+## Änderungen
 
-| Windows                                                                                                                                  | MacOS                                                                                                                                        | Linux                                                                                                                                     |
-|------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|
-| <img src="./share/os-logos/windows.png" width="100" alt="Windows">                                                                       | <img src="./share/os-logos/apple.png" width="90" alt="MacOS">                                                                                | <img src="./share/os-logos/linux.png" width="100" alt="Linux">                                                                            |
-| [EXE-Installer](https://github.com/OpenIndex/ZUGFeRD-Manager/releases/download/v1.3.2/ZUGFeRD-Manager-1.3.2-windows-x64.exe)<br>(x86_64) | [DMG-Archiv](https://github.com/OpenIndex/ZUGFeRD-Manager/releases/download/v1.3.2/ZUGFeRD-Manager-1.3.2-macos-arm64.dmg)<br>(M1 oder neuer) | [DEB-Installer](https://github.com/OpenIndex/ZUGFeRD-Manager/releases/download/v1.3.2/ZUGFeRD-Manager-1.3.2-linux-x64.deb)<br>(x86_64)    |
-| [ZIP-Archiv](https://github.com/OpenIndex/ZUGFeRD-Manager/releases/download/v1.3.2/ZUGFeRD-Manager-1.3.2-windows-x64.zip)<br>(x86_64)    | [DMG-Archiv](https://github.com/OpenIndex/ZUGFeRD-Manager/releases/download/v1.3.2/ZUGFeRD-Manager-1.3.2-macos-x64.dmg)<br>(Intel)           | [RPM-Installer](https://github.com/OpenIndex/ZUGFeRD-Manager/releases/download/v1.3.2/ZUGFeRD-Manager-1.3.2-linux-x64.rpm)<br>(x86_64)    |
-|                                                                                                                                          |                                                                                                                                              | [TAR.GZ-Archiv](https://github.com/OpenIndex/ZUGFeRD-Manager/releases/download/v1.3.2/ZUGFeRD-Manager-1.3.2-linux-x64.tar.gz)<br>(x86_64) |
+- 20261126: Ein Feld für die Leitweg-ID hinzugefügt.
 
-Ältere Versionen sind in der [Release-Übersicht](https://github.com/OpenIndex/ZUGFeRD-Manager/releases) zu finden.
+
+## Kompilieren
+
+   ```bash
+   git clone https://github.com/KonstantinSchneider/ZUGFeRD-Manager.git
+   cd ZUGFeRD-Manager
+   ./init-jdk.sh
+   source env.sh
+   ./gradlew createDistributable
+   ```
+Anschließend liegen im (lokalen) Ordner *./manager/build/compose/binaries/main/app* ein Ordner namens *ZUGFeRD-Manager*. Dieser stellt die Endanwenung dar. Die beiden sich darin befindenden Ornder *bin* und *lib* müssen zusammen bleiben. Die Start-Datei befindet sich im *bin* Ordner.
 
 
 ## Zielgruppe
