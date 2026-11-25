@@ -109,6 +109,7 @@ import de.openindex.zugferd.zugferd_manager.generated.resources.AppCreateGeneral
 import de.openindex.zugferd.zugferd_manager.generated.resources.AppCreateGeneralDeliveryDateStart
 import de.openindex.zugferd.zugferd_manager.generated.resources.AppCreateGeneralDueDate
 import de.openindex.zugferd.zugferd_manager.generated.resources.AppCreateGeneralInvoiceNumber
+import de.openindex.zugferd.zugferd_manager.generated.resources.AppCreateGeneralLeitwegId
 import de.openindex.zugferd.zugferd_manager.generated.resources.AppCreateGeneralIssueDate
 import de.openindex.zugferd.zugferd_manager.generated.resources.AppCreateGeneralRecipient
 import de.openindex.zugferd.zugferd_manager.generated.resources.AppCreateGeneralRecipientAdd
@@ -568,6 +569,14 @@ private fun ColumnScope.GeneralForm(state: CreateSectionState) {
                 modifier = Modifier
                     .fillMaxWidth(),
             ) {
+                // Field for the buyer reference (Leitweg-ID).
+                TextField(
+                    label = Res.string.AppCreateGeneralLeitwegId,
+                    value = state.invoiceLeitwegId,
+                    onValueChange = { state.invoiceLeitwegId = it },
+                    modifier = Modifier
+                        .weight(0.5f, true),
+                )
                 // Field for the invoice number.
                 TextField(
                     label = Res.string.AppCreateGeneralInvoiceNumber,

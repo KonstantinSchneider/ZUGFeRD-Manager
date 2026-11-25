@@ -47,6 +47,7 @@ data class Invoice(
     val recipient: TradeParty? = null,
     val currency: String? = null,
     val items: List<Item> = listOf(),
+    val leitwegId: String = "",
 )
 
 //expect fun Invoice.isValid(): Boolean

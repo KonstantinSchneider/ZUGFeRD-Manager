@@ -204,6 +204,11 @@ class CreateSectionState : SectionState() {
         set(value) {
             _invoice.value = _invoice.value.copy(number = value)
         }
+    var invoiceLeitwegId: String
+        get() = _invoice.value.leitwegId
+        set(value) {
+            _invoice.value = _invoice.value.copy(leitwegId = value)
+        }
     var invoicePaymentMethod: PaymentMethod
         get() = _invoice.value._paymentMethod
         set(value) {

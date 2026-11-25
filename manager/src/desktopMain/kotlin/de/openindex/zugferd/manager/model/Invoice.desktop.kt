@@ -55,6 +55,7 @@ fun Invoice.build(method: PaymentMethod): _Invoice =
     _Invoice()
         .setCurrency(currency)
         .setNumber(number)
+        .setReferenceNumber(leitwegId.trimToNull())
         .setIssueDate(issueDate.toJavaDate())
         .setDueDate(dueDate.toJavaDate())
         .setDeliveryDate(deliveryDate?.toJavaDate())
